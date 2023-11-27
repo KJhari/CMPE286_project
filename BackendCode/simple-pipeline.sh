@@ -1,0 +1,1 @@
+mvn clean package spring-boot:repackage && scp /home/thegeekylad/Projects/Projects/marcus3.0/marcus-backend/target/marcusbackend-0.0.1-SNAPSHOT.jar thegeekylad@192.168.2.2:/home/thegeekylad/ServerExperiments/marcus3.0/

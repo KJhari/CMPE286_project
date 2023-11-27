@@ -1,0 +1,22 @@
+branch-defaults:
+  default:
+    environment: null
+    group_suffix: null
+  feature:
+    environment: Marcussmarthome-env-1
+deploy:
+  artifact: target/marcusbackend-0.0.1-SNAPSHOT.jar
+global:
+  application_name: marcus-smart-home
+  branch: null
+  default_ec2_keyname: aws-eb
+  default_platform: Corretto 11 running on 64bit Amazon Linux 2
+  default_region: eu-west-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  repository: null
+  sc: null
+  workspace_type: Application
