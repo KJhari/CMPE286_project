@@ -1,5 +1,5 @@
 /*
-  ESP8266 Marcus v2.0 Relay Control by theGeekyLad
+  ESP8266 Marcus v2.0 Relay Control by Harikrishnan,Akshatha and Meghana
 */
 
 // imports

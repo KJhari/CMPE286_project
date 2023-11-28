@@ -14,7 +14,7 @@ public class SimpleController {
     @GetMapping("/")
     public String greeting() {
         Helpers.log("Served a welcome request.", true);
-        return "Welcome to Marcus Smart Home! Drop an email to rahul.pillai03@gmail.com to know more. :)";
+        return "Welcome to Marcus Smart Home! Drop an email to harikrishnan.kokkantharajeevan@sjsu.edu to know more. :)";
     }
 
     @PostMapping("/attentionGrabberLogin")
