@@ -1,5 +1,6 @@
 /*
   ESP8266 Marcus v2.0 Relay Control by Harikrishnan,Akshatha and Meghana
+  CMPE 286, Fall 2023
 */
 
 // imports
