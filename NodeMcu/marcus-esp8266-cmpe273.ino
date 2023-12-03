@@ -12,10 +12,10 @@
 
 // wifi config
 #ifndef STASSID
-// #define STASSID "The 192 Network 2.4G"
-// #define STAPSK  "Mumbai254"
-#define STASSID "GalaxyS10Lite120a"
-#define STAPSK  "martial11"
+#define STASSID "The 192 Network 2.4G"
+#define STAPSK  "Mumbai254"
+// #define STASSID "GalaxyS10Lite120a"
+// #define STAPSK  "martial11"
 #endif
 
 // -------------------------------------------------------------------
@@ -53,7 +53,7 @@ const int TASK_TIME_REPORT = 2;
 
 // mqtt
 //const char* mqtt_server = "test.mosquitto.org";
-const char* mqtt_server = "0.tcp.us-cal-1.ngrok.io";
+const char* mqtt_server = "10.0.0.74";
 WiFiClient espClient;
 PubSubClient client(espClient);
 
@@ -293,7 +293,8 @@ void setup() {
   // -----------------------------------
 
   // setup mqtt
-  client.setServer(mqtt_server, 11464);
+  // client.setServer(mqtt_server, 11464);
+  //client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
 }
 

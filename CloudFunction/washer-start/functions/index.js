@@ -106,7 +106,7 @@ const app = smarthome();
 // assistant discovery
 app.onSync(async (body) => {
   try {
-    const devices = await axios.get(` https://f3e9-2601-646-a080-7c60-d93c-86fd-9f20-c2f4.ngrok-free.app/discover/googleAssistant`);
+    const devices = await axios.get(` https://d259-2601-646-a080-7c60-d93c-86fd-9f20-c2f4.ngrok-free.app/discover/googleAssistant`);
     // response.status(200).send(devices.data);
     return {
       requestId: body.requestId,
@@ -133,7 +133,7 @@ app.onQuery(async (body) => {
   for (const device of intent.payload.devices) {
     const deviceId = device.id
     try {
-      const status = await axios.get(` https://f3e9-2601-646-a080-7c60-d93c-86fd-9f20-c2f4.ngrok-free.app/query/googleAssistant?id=${deviceId}`);
+      const status = await axios.get(` https://d259-2601-646-a080-7c60-d93c-86fd-9f20-c2f4.ngrok-free.app/query/googleAssistant?id=${deviceId}`);
       payload.devices[deviceId] = status.data.result
     } catch (err) {
       console.log(err);
@@ -180,7 +180,7 @@ app.onExecute(async (body) => {
       const payload = { deviceId, boardTopic, state }
 
       try {
-        const resDeviceCloud = await axios.post(` https://f3e9-2601-646-a080-7c60-d93c-86fd-9f20-c2f4.ngrok-free.app/toggle/googleAssistant`, payload);
+        const resDeviceCloud = await axios.post(` https://d259-2601-646-a080-7c60-d93c-86fd-9f20-c2f4.ngrok-free.app/toggle/googleAssistant`, payload);
         if (resDeviceCloud?.data?.result?.error) throw new Error('Something failed at the device cloud.');
         result.ids.push(device.id);
       } catch (err) {
